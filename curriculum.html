@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartCampus - Curriculum</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            <div>
+                <h2>SmartCampus</h2>
+                <span>Activity, Curriculum & Attendance</span>
+            </div>
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html" class="nav-item">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="attendance.html" class="nav-item">
+                <i class="fa-regular fa-calendar-check"></i>
+                <span>Attendance</span>
+            </a>
+
+            <a href="curriculum.html" class="nav-item active">
+                <i class="fa-solid fa-book-open"></i>
+                <span>Curriculum</span>
+            </a>
+
+            <a href="activities.html" class="nav-item">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <span>Activities</span>
+            </a>
+
+            <a href="timetable.html" class="nav-item">
+                <i class="fa-regular fa-calendar"></i>
+                <span>Timetable</span>
+            </a>
+
+            <a href="notifications.html" class="nav-item">
+                <i class="fa-regular fa-bell"></i>
+                <span>Notifications</span>
+            </a>
+
+            <a href="profile.html" class="nav-item">
+                <i class="fa-regular fa-user"></i>
+                <span>Profile</span>
+            </a>
+
+            <a href="settings.html" class="nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+        <a href="#" class="logout" onclick="logout()">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+        </a>
+
+    </aside>
+
+
+    <main class="main">
+
+        <header class="header">
+
+            <div class="mobile-menu" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="header-right">
+
+                <div class="notification-icon">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>3</span>
+                </div>
+
+                <div class="student">
+
+                    <div>
+                        <strong>Naveen Kumar</strong>
+                        <small>Student</small>
+                    </div>
+
+                    <div class="avatar">NK</div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <section class="content">
+
+            <div class="page-heading">
+
+                <div>
+                    <h1>Curriculum</h1>
+                    <p>Track your academic curriculum progress.</p>
+                </div>
+
+                <span id="currentDate"></span>
+
+            </div>
+
+
+            <div class="stats">
+
+                <div class="stat-card curriculum-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+
+                    <div>
+                        <p>Overall Progress</p>
+                        <h2>65%</h2>
+                        <span>Curriculum completed</span>
+                    </div>
+
+                </div>
+
+                <div class="stat-card attendance-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <div>
+                        <p>Completed Subjects</p>
+                        <h2>3</h2>
+                        <span>Out of 5 subjects</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="panel">
+
+                <div class="panel-title">
+                    <h2>
+                        <i class="fa-solid fa-book-open"></i>
+                        Course Progress
+                    </h2>
+                </div>
+
+
+                <div class="subject">
+
+                    <div class="subject-info">
+                        <span>Java Programming</span>
+                        <b>80%</b>
+                    </div>
+
+                    <div class="progress">
+                        <div style="width:80%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="subject">
+
+                    <div class="subject-info">
+                        <span>Data Structures</span>
+                        <b>70%</b>
+                    </div>
+
+                    <div class="progress">
+                        <div style="width:70%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="subject">
+
+                    <div class="subject-info">
+                        <span>Database Management</span>
+                        <b>55%</b>
+                    </div>
+
+                    <div class="progress warning">
+                        <div style="width:55%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="subject">
+
+                    <div class="subject-info">
+                        <span>Discrete Mathematics</span>
+                        <b>65%</b>
+                    </div>
+
+                    <div class="progress">
+                        <div style="width:65%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="subject">
+
+                    <div class="subject-info">
+                        <span>Computer Networks</span>
+                        <b>60%</b>
+                    </div>
+
+                    <div class="progress">
+                        <div style="width:60%"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

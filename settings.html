@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartCampus - Settings</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            <div>
+                <h2>SmartCampus</h2>
+                <span>Activity, Curriculum & Attendance</span>
+            </div>
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html" class="nav-item">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="attendance.html" class="nav-item">
+                <i class="fa-regular fa-calendar-check"></i>
+                <span>Attendance</span>
+            </a>
+
+            <a href="curriculum.html" class="nav-item">
+                <i class="fa-solid fa-book-open"></i>
+                <span>Curriculum</span>
+            </a>
+
+            <a href="activities.html" class="nav-item">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <span>Activities</span>
+            </a>
+
+            <a href="timetable.html" class="nav-item">
+                <i class="fa-regular fa-calendar"></i>
+                <span>Timetable</span>
+            </a>
+
+            <a href="notifications.html" class="nav-item">
+                <i class="fa-regular fa-bell"></i>
+                <span>Notifications</span>
+            </a>
+
+            <a href="profile.html" class="nav-item">
+                <i class="fa-regular fa-user"></i>
+                <span>Profile</span>
+            </a>
+
+            <a href="settings.html" class="nav-item active">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+        <a href="#" class="logout" onclick="logout()">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+        </a>
+
+    </aside>
+
+
+    <main class="main">
+
+        <header class="header">
+
+            <div class="mobile-menu" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="header-right">
+
+                <div class="notification-icon">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>3</span>
+                </div>
+
+                <div class="student">
+
+                    <div>
+                        <strong>Naveen Kumar</strong>
+                        <small>Student</small>
+                    </div>
+
+                    <div class="avatar">NK</div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <section class="content">
+
+            <div class="page-heading">
+
+                <div>
+                    <h1>Settings</h1>
+                    <p>Manage your SmartCampus preferences.</p>
+                </div>
+
+                <span id="currentDate"></span>
+
+            </div>
+
+
+            <div class="panel">
+
+                <div class="panel-title">
+                    <h2>
+                        <i class="fa-solid fa-gear"></i>
+                        General Settings
+                    </h2>
+                </div>
+
+
+                <div class="setting-row">
+
+                    <div>
+                        <b>Email Notifications</b>
+                        <small>Receive academic updates through email.</small>
+                    </div>
+
+                    <input type="checkbox" checked>
+
+                </div>
+
+
+                <div class="setting-row">
+
+                    <div>
+                        <b>Attendance Alerts</b>
+                        <small>Get notified when attendance falls below 75%.</small>
+                    </div>
+
+                    <input type="checkbox" checked>
+
+                </div>
+
+
+                <div class="setting-row">
+
+                    <div>
+                        <b>Activity Reminders</b>
+                        <small>Receive reminders for upcoming deadlines.</small>
+                    </div>
+
+                    <input type="checkbox" checked>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

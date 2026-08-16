@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>SmartCampus - Student Dashboard</title>
+    <title>SmartCampus</title>
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Icons -->
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -19,8 +18,7 @@
 
 <div class="app">
 
-    <!-- ================= SIDEBAR ================= -->
-
+    <!-- SIDEBAR -->
     <aside class="sidebar">
 
         <div class="logo">
@@ -34,49 +32,49 @@
 
         <nav>
 
-            <a href="#" class="nav-item active" data-page="dashboard">
+            <a href="index.html" class="nav-item active">
                 <i class="fa-solid fa-chart-line"></i>
                 <span>Dashboard</span>
             </a>
 
-            <a href="#" class="nav-item" data-page="attendance">
+            <a href="attendance.html" class="nav-item">
                 <i class="fa-regular fa-calendar-check"></i>
                 <span>Attendance</span>
             </a>
 
-            <a href="#" class="nav-item" data-page="curriculum">
+            <a href="curriculum.html" class="nav-item">
                 <i class="fa-solid fa-book-open"></i>
                 <span>Curriculum</span>
             </a>
 
-            <a href="#" class="nav-item" data-page="activities">
+            <a href="activities.html" class="nav-item">
                 <i class="fa-solid fa-clipboard-list"></i>
                 <span>Activities</span>
             </a>
 
-            <a href="#" class="nav-item" data-page="timetable">
+            <a href="timetable.html" class="nav-item">
                 <i class="fa-regular fa-calendar"></i>
                 <span>Timetable</span>
             </a>
 
-            <a href="#" class="nav-item" data-page="notifications">
+            <a href="notifications.html" class="nav-item">
                 <i class="fa-regular fa-bell"></i>
                 <span>Notifications</span>
             </a>
 
-            <a href="#" class="nav-item" data-page="profile">
+            <a href="profile.html" class="nav-item">
                 <i class="fa-regular fa-user"></i>
                 <span>Profile</span>
             </a>
 
-            <a href="#" class="nav-item" data-page="settings">
+            <a href="settings.html" class="nav-item">
                 <i class="fa-solid fa-gear"></i>
                 <span>Settings</span>
             </a>
 
         </nav>
 
-        <a href="#" class="logout">
+        <a href="#" class="logout" onclick="logout()">
             <i class="fa-solid fa-right-from-bracket"></i>
             <span>Logout</span>
         </a>
@@ -84,12 +82,10 @@
     </aside>
 
 
-    <!-- ================= MAIN ================= -->
-
+    <!-- MAIN -->
     <main class="main">
 
         <!-- HEADER -->
-
         <header class="header">
 
             <div class="mobile-menu" id="menuBtn">
@@ -121,9 +117,8 @@
         </header>
 
 
-        <!-- ================= CONTENT ================= -->
-
-        <section class="content" id="content">
+        <!-- CONTENT -->
+        <section class="content">
 
             <div class="page-heading">
 
@@ -137,8 +132,7 @@
             </div>
 
 
-            <!-- ================= STAT CARDS ================= -->
-
+            <!-- STAT CARDS -->
             <div class="stats">
 
                 <div class="stat-card attendance-card">
@@ -153,7 +147,7 @@
                         <span>Overall Attendance</span>
                     </div>
 
-                    <button onclick="showPage('attendance')">
+                    <button onclick="location.href='attendance.html'">
                         View Details →
                     </button>
 
@@ -172,7 +166,7 @@
                         <span>Completed</span>
                     </div>
 
-                    <button onclick="showPage('curriculum')">
+                    <button onclick="location.href='curriculum.html'">
                         View Progress →
                     </button>
 
@@ -191,7 +185,7 @@
                         <span>Total Pending</span>
                     </div>
 
-                    <button onclick="showPage('activities')">
+                    <button onclick="location.href='activities.html'">
                         View Activities →
                     </button>
 
@@ -210,7 +204,7 @@
                         <span>This Week</span>
                     </div>
 
-                    <button onclick="showPage('activities')">
+                    <button onclick="location.href='activities.html'">
                         View Calendar →
                     </button>
 
@@ -219,13 +213,10 @@
             </div>
 
 
-            <!-- ================= MIDDLE SECTION ================= -->
-
+            <!-- MIDDLE -->
             <div class="middle-grid">
 
-
                 <!-- TODAY'S CLASSES -->
-
                 <div class="panel">
 
                     <div class="panel-title">
@@ -326,8 +317,9 @@
 
                     </div>
 
-                    <button class="view-btn"
-                            onclick="showPage('timetable')">
+                    <button
+                        class="view-btn"
+                        onclick="location.href='timetable.html'">
                         View Timetable →
                     </button>
 
@@ -335,7 +327,6 @@
 
 
                 <!-- ATTENDANCE OVERVIEW -->
-
                 <div class="panel">
 
                     <div class="panel-title">
@@ -380,8 +371,9 @@
 
                     </div>
 
-                    <button class="view-btn"
-                            onclick="showPage('attendance')">
+                    <button
+                        class="view-btn"
+                        onclick="location.href='attendance.html'">
                         View Full Attendance →
                     </button>
 
@@ -389,14 +381,15 @@
 
 
                 <!-- SUBJECT ATTENDANCE -->
-
                 <div class="panel">
 
                     <div class="panel-title">
+
                         <h2>
                             <i class="fa-solid fa-chart-column"></i>
                             Subject-wise Attendance
                         </h2>
+
                     </div>
 
 
@@ -470,8 +463,9 @@
                     </div>
 
 
-                    <button class="view-btn"
-                            onclick="showPage('attendance')">
+                    <button
+                        class="view-btn"
+                        onclick="location.href='attendance.html'">
                         View All Subjects →
                     </button>
 
@@ -480,13 +474,10 @@
             </div>
 
 
-            <!-- ================= BOTTOM ================= -->
-
+            <!-- BOTTOM -->
             <div class="bottom-grid">
 
-
                 <!-- ACTIVITIES -->
-
                 <div class="panel">
 
                     <div class="panel-title">
@@ -550,8 +541,9 @@
                     </div>
 
 
-                    <button class="view-btn"
-                            onclick="showPage('activities')">
+                    <button
+                        class="view-btn"
+                        onclick="location.href='activities.html'">
                         View All Activities →
                     </button>
 
@@ -559,7 +551,6 @@
 
 
                 <!-- NOTIFICATIONS -->
-
                 <div class="panel">
 
                     <div class="panel-title">
@@ -611,8 +602,9 @@
                     </div>
 
 
-                    <button class="view-btn"
-                            onclick="showPage('notifications')">
+                    <button
+                        class="view-btn"
+                        onclick="location.href='notifications.html'">
                         View All Notifications →
                     </button>
 
@@ -625,7 +617,6 @@
     </main>
 
 </div>
-
 
 <script src="script.js"></script>
 

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartCampus - Attendance</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            <div>
+                <h2>SmartCampus</h2>
+                <span>Activity, Curriculum & Attendance</span>
+            </div>
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html" class="nav-item">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="attendance.html" class="nav-item active">
+                <i class="fa-regular fa-calendar-check"></i>
+                <span>Attendance</span>
+            </a>
+
+            <a href="curriculum.html" class="nav-item">
+                <i class="fa-solid fa-book-open"></i>
+                <span>Curriculum</span>
+            </a>
+
+            <a href="activities.html" class="nav-item">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <span>Activities</span>
+            </a>
+
+            <a href="timetable.html" class="nav-item">
+                <i class="fa-regular fa-calendar"></i>
+                <span>Timetable</span>
+            </a>
+
+            <a href="notifications.html" class="nav-item">
+                <i class="fa-regular fa-bell"></i>
+                <span>Notifications</span>
+            </a>
+
+            <a href="profile.html" class="nav-item">
+                <i class="fa-regular fa-user"></i>
+                <span>Profile</span>
+            </a>
+
+            <a href="settings.html" class="nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+        <a href="#" class="logout" onclick="logout()">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+        </a>
+
+    </aside>
+
+
+    <main class="main">
+
+        <header class="header">
+
+            <div class="mobile-menu" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="header-right">
+
+                <div class="notification-icon">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>3</span>
+                </div>
+
+                <div class="student">
+
+                    <div>
+                        <strong>Naveen Kumar</strong>
+                        <small>Student</small>
+                    </div>
+
+                    <div class="avatar">
+                        NK
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <section class="content">
+
+            <div class="page-heading">
+
+                <div>
+                    <h1>Attendance</h1>
+                    <p>Track your subject-wise attendance.</p>
+                </div>
+
+                <span id="currentDate"></span>
+
+            </div>
+
+
+            <div class="stats">
+
+                <div class="stat-card attendance-card">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+
+                    <div>
+                        <p>Overall Attendance</p>
+                        <h2>82%</h2>
+                        <span>Good Standing</span>
+                    </div>
+                </div>
+
+
+                <div class="stat-card curriculum-card">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+
+                    <div>
+                        <p>Total Present</p>
+                        <h2>164</h2>
+                        <span>Classes attended</span>
+                    </div>
+                </div>
+
+
+                <div class="stat-card activity-card">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+
+                    <div>
+                        <p>Total Absent</p>
+                        <h2>32</h2>
+                        <span>Classes missed</span>
+                    </div>
+                </div>
+
+
+                <div class="stat-card deadline-card">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+
+                    <div>
+                        <p>Late</p>
+                        <h2>4</h2>
+                        <span>Late arrivals</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="panel">
+
+                <div class="panel-title">
+                    <h2>
+                        <i class="fa-solid fa-chart-column"></i>
+                        Subject-wise Attendance
+                    </h2>
+                </div>
+
+
+                <div class="subject">
+
+                    <div class="subject-info">
+                        <span>Java Programming</span>
+                        <b>88%</b>
+                    </div>
+
+                    <div class="progress">
+                        <div style="width:88%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="subject">
+
+                    <div class="subject-info">
+                        <span>Data Structures</span>
+                        <b>76%</b>
+                    </div>
+
+                    <div class="progress">
+                        <div style="width:76%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="subject">
+
+                    <div class="subject-info">
+                        <span>Database Management</span>
+                        <b class="warning-text">68%</b>
+                    </div>
+
+                    <div class="progress warning">
+                        <div style="width:68%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="subject">
+
+                    <div class="subject-info">
+                        <span>Discrete Mathematics</span>
+                        <b>85%</b>
+                    </div>
+
+                    <div class="progress">
+                        <div style="width:85%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="subject">
+
+                    <div class="subject-info">
+                        <span>Computer Networks</span>
+                        <b>90%</b>
+                    </div>
+
+                    <div class="progress">
+                        <div style="width:90%"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
